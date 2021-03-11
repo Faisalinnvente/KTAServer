@@ -22,7 +22,7 @@ mongoose.connect(db, {
         });
 
 // Defining the port
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 80;
 
 // Initialise CORs middleware
 app.use(cors());
