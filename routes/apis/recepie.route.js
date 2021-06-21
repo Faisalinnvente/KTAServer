@@ -17,7 +17,7 @@ router.get('/dinner', (req, res, next) => {
 });
 
 // get dinner by ID
-router.post('/dinner/:id', (req,res,next) => {
+router.get('/dinner/:id', (req,res,next) => {
     const rId = req.params.id;
 
     Dinner.findOne({recipieId: rId}).select({'_id': 0, '__v':0})
@@ -40,7 +40,7 @@ router.get('/lunch', (req, res, next) => {
 });
 
 // get lunch by ID
-router.post('/lunch/:id', (req,res,next) => {
+router.get('/lunch/:id', (req,res,next) => {
     const rId = req.params.id;
 
     Lunch.findOne({recipieId: rId}).select({'_id': 0, '__v':0})
@@ -63,7 +63,7 @@ router.get('/breakfast', (req, res, next) => {
 });
 
 // get breakfast by ID
-router.post('/breakfast/:id', (req,res,next) => {
+router.get('/breakfast/:id', (req,res,next) => {
     const rId = req.params.id;
 
     Breakfast.findOne({recipieId: rId}).select({'_id': 0, '__v':0})
